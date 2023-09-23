@@ -4,4 +4,4 @@
 
 デモサイトを見る時は、デベロッパーツールは使用せず
 
- https://hub-vixiv.github.io/pra_03/
+ https://hub-vixiv.github.io/pra_english/
