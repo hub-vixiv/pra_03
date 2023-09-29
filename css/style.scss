@@ -31,18 +31,6 @@ $bp_pc: 900px;
     @content;
   }
 }
-/* モバイルファースト */
-// @mixin media_pc(){
-//   @media screen and (min-width: $bp_pc){
-//     @content;
-//   }
-// }
-// @mixin media_tab(){
-//   @media screen and (min-width: $bp_t){
-//     @content;
-//   }
-// }
-
 
 *, *::before, *::after{
   box-sizing: border-box;
@@ -100,7 +88,6 @@ h1,h2,h3,h4,h5,h6{
   .header_top{
     display: flex;
     justify-content: space-between;
-    
     
     .header_left{
       h1{
@@ -541,6 +528,7 @@ footer{
     justify-content: space-between;
     padding-bottom: 50px;
     .footer_content{
+      width: 100%;
       .content_title{
         text-align-last: left;
         margin-bottom: 10px;
@@ -563,6 +551,9 @@ footer{
   }
 }
 
+/*--------------------
+アニメーション
+----------------------*/
 @keyframes bgAnime {
   0% { opacity: 0; }
   5% { opacity: 1; }
@@ -573,10 +564,11 @@ footer{
 @keyframes fall {
   0%{background-position: 0 0;}
 100%{background-position: -700px 700px;}
-
-  
 }
 
+/*--------------------
+メディアクエリ
+----------------------*/
 @include media_m(){
   wrap{
     width: 90vw;
@@ -666,6 +658,21 @@ footer{
               transform: rotate(45deg);
             }
           }
+        }
+      }
+    }
+  }
+
+  .footer{
+    .footer_wrap{
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      .footer_content{
+        width: 50%;
+        &:first-of-type,
+        &:nth-child(2){
+          margin-bottom: 30px;
         }
       }
     }

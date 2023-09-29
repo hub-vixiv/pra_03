@@ -15,7 +15,6 @@ Base
 /* t = tablet */
 /* media mixin */
 /* ＰＣファースト 指定以下に適用 */
-/* モバイルファースト */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -473,6 +472,9 @@ footer .footer_wrap {
   justify-content: space-between;
   padding-bottom: 50px;
 }
+footer .footer_wrap .footer_content {
+  width: 100%;
+}
 footer .footer_wrap .footer_content .content_title {
   text-align-last: left;
   margin-bottom: 10px;
@@ -488,6 +490,9 @@ footer .footer_copy {
   font-size: 0.8em;
 }
 
+/*--------------------
+アニメーション
+----------------------*/
 @keyframes bgAnime {
   0% {
     opacity: 0;
@@ -513,6 +518,9 @@ footer .footer_copy {
     background-position: -700px 700px;
   }
 }
+/*--------------------
+メディアクエリ
+----------------------*/
 @media screen and (max-width: 900px) {
   wrap {
     width: 90vw;
@@ -585,4 +593,15 @@ footer .footer_copy {
     left: 48%;
     transform: rotate(45deg);
   }
-}/*# sourceMappingURL=style.css.map */
+  .footer .footer_wrap {
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer .footer_wrap .footer_content {
+    width: 50%;
+  }
+  .footer .footer_wrap .footer_content:first-of-type, .footer .footer_wrap .footer_content:nth-child(2) {
+    margin-bottom: 30px;
+  }
+}
